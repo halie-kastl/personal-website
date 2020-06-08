@@ -1,6 +1,15 @@
 .img-container {
   max-width: 700px;
   text-align: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.img-section {
+  max-width: 400px;
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 .header-link {
@@ -14,6 +23,8 @@
 }
 
 .wrap {
+  justify-content: space-around;
+  align-items: flex-start;
   margin: 0;
 }
 
