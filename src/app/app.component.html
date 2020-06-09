@@ -1,68 +1,65 @@
 <header></header>
 <body>
-  <div>
-    <section>
-      <div class="wrap full-page justify-content-center">
-        <div class="text-light">
+  <section>
+    <div class="wrap full-page justify-content-center">
+      <div class="text-light">
+        <div>
+          <div class="header justify-content-center">
+            <p>Fullstack Engineer</p>
+          </div>
           <div>
-            <div class="header justify-content-center">
-              <p>Fullstack Engineer</p>
-            </div>
-            <div>
-              <img
-                class="img-container"
-                src="assets/images/welcome-static.png"
-              />
-            </div>
+            <img class="img-container" src="assets/images/welcome-static.png" />
           </div>
         </div>
       </div>
-      <div class="d-flex sticky-nav justify-content-center">
-        <div class="header-link"><a href="about">About</a></div>
-        <div class="header-link"><a href="work">Work</a></div>
-        <div class="header-link"><a href="contact">Contact</a></div>
+    </div>
+    <div class="d-flex sticky-nav justify-content-center">
+      <div (click)="smoothScroll('about')" class="header-link">
+        About
       </div>
-    </section>
-    <section>
-      <div class="full-page row">
-        <div
-          class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
-        >
-          <img class="img-section" src="assets/images/about.png" />
-        </div>
-        <div class="col-sm-12 col-md-6 section-text">
-          <!-- <app-about ></app-about> -->
-          <h4 class="pt-4">
-            <strong
-              >I'm a full stack application engineer with a passion for the
-              creative.</strong
-            >
-          </h4>
-          <p></p>
-        </div>
+      <div class="header-link">Work</div>
+      <div class="header-link">Contact</div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="full-page row">
+      <div
+        class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
+      >
+        <img class="img-section" src="assets/images/about.png" />
       </div>
-    </section>
-    <section>
-      <div class="full-page row">
-        <div
-          class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
-        >
-          <img class="img-section" src="assets/images/work.png" />
-          <div></div>
-        </div>
-        <div class="col-sm-12 col-md-6 section-text"></div>
+      <div class="col-sm-12 col-md-6 section-text">
+        <!-- <app-about ></app-about> -->
+        <h4 class="pt-4">
+          <strong
+            >I'm a full stack application engineer with a passion for the
+            creative.</strong
+          >
+        </h4>
+        <p></p>
       </div>
-    </section>
-    <section>
-      <div class="full-page row">
-        <div
-          class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
-        >
-          <img class="img-section" src="assets/images/contact.png" />
-        </div>
-        <div class="col-sm-12 col-md-6 section-text"></div>
+    </div>
+  </section>
+  <section>
+    <div class="full-page row">
+      <div
+        class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
+      >
+        <img class="img-section" src="assets/images/work.png" />
+        <div></div>
       </div>
-    </section>
-  </div>
+      <div class="col-sm-12 col-md-6 section-text"></div>
+    </div>
+  </section>
+  <section>
+    <div class="full-page row">
+      <div
+        class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
+      >
+        <img class="img-section" src="assets/images/contact.png" />
+      </div>
+      <div class="col-sm-12 col-md-6 section-text"></div>
+    </div>
+  </section>
 </body>
 <footer></footer>
