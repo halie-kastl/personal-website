@@ -14,52 +14,93 @@
       </div>
     </div>
     <div class="d-flex sticky-nav justify-content-center">
-      <div (click)="smoothScroll('about')" class="header-link">
+      <div (click)="smoothScroll('about')" class="header button">
         About
       </div>
-      <div class="header-link">Work</div>
-      <div class="header-link">Contact</div>
+      <div (click)="smoothScroll('work')" class="header button">Work</div>
+      <div (click)="smoothScroll('contact')" class="header button">Contact</div>
     </div>
   </section>
-  <section class="about">
+  <section id="about">
     <div class="full-page row">
-      <div
-        class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
-      >
-        <img class="img-section" src="assets/images/about.png" />
+      <div class="col-12 col-lg-6 d-flex justify-content-center section-header">
+        <div>
+          <img class="img-section" src="assets/images/about.png" />
+          <div class="d-flex justify-content-center">
+            <div (click)="smoothScroll('about')" class="header button">
+              About
+            </div>
+            <div (click)="smoothScroll('work')" class="header button">Work</div>
+            <div (click)="smoothScroll('contact')" class="header button">
+              Contact
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-12 col-md-6 section-text">
-        <!-- <app-about ></app-about> -->
-        <h4 class="pt-4">
+      <div class="col-12 col-lg-6 section-text">
+        <h4 class="py-4">
           <strong
-            >I'm a full stack application engineer with a passion for the
-            creative.</strong
+            >I'm a full stack application engineer with a passion for
+            functional, beautiful things.</strong
           >
+        </h4>
+        <h4><strong>Development</strong></h4>
+        <p class="pt-2">
+          When I began my development career I was captivated by collective
+          attitude of the industry to never be satisfied with the status-quo,
+          and to never rest on your laurels when you see another problem to
+          solve. As I mature on my own path within the industry, that constant
+          curiosity sustains my work and drives me put a growth mindset at the
+          center of my development practice.
+        </p>
+        <h4 class="py-4"><strong>UX and Design</strong></h4>
+        <p></p>
+      </div>
+    </div>
+  </section>
+  <section id="work">
+    <div class="full-page row">
+      <div class="col-12 col-lg-6 d-flex justify-content-center section-header">
+        <div>
+          <img class="img-section" src="assets/images/work.png" />
+          <div class="d-flex justify-content-center">
+            <div (click)="smoothScroll('about')" class="header button">
+              About
+            </div>
+            <div (click)="smoothScroll('work')" class="header button">Work</div>
+            <div (click)="smoothScroll('contact')" class="header button">
+              Contact
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 section-text"></div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="full-page row">
+      <div class="col-12 col-lg-6 d-flex justify-content-center section-header">
+        <div>
+          <img class="img-section" src="assets/images/contact.png" />
+          <div class="d-flex justify-content-center">
+            <div (click)="smoothScroll('about')" class="header button">
+              About
+            </div>
+            <div (click)="smoothScroll('work')" class="header button">Work</div>
+            <div (click)="smoothScroll('contact')" class="header button">
+              Contact
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 section-text">
+        <h4 class="pt-4">
+          <strong>Lets work together</strong>
         </h4>
         <p></p>
       </div>
     </div>
   </section>
-  <section>
-    <div class="full-page row">
-      <div
-        class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
-      >
-        <img class="img-section" src="assets/images/work.png" />
-        <div></div>
-      </div>
-      <div class="col-sm-12 col-md-6 section-text"></div>
-    </div>
-  </section>
-  <section>
-    <div class="full-page row">
-      <div
-        class="col-sm-12 col-md-6 d-flex justify-content-center section-header"
-      >
-        <img class="img-section" src="assets/images/contact.png" />
-      </div>
-      <div class="col-sm-12 col-md-6 section-text"></div>
-    </div>
-  </section>
+  <section></section>
 </body>
 <footer></footer>

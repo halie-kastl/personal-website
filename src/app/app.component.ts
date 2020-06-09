@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: "app-root",
@@ -8,7 +9,7 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "web";
 
-  constructor(htmlElement: HTMLElement) {}
+  constructor(@Inject(DOCUMENT) document) {}
 
   smoothScroll(elementId) {
     var MIN_PIXELS_PER_STEP = 16;
@@ -16,7 +17,7 @@ export class AppComponent {
     var target = document.getElementById(elementId);
     var scrollContainer = target;
     do {
-      scrollContainer = scrollContainer.parentNode as HTMLElement;
+      scrollContainer = scrollContainer.parentElement as HTMLElement;
       if (!scrollContainer) return;
       scrollContainer.scrollTop += 1;
     } while (scrollContainer.scrollTop === 0);
