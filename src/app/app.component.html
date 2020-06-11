@@ -14,11 +14,11 @@
       </div>
     </div>
     <div class="d-flex sticky-nav justify-content-center">
-      <div (click)="smoothScroll('about')" class="header button">
+      <div (click)="smoothScroll('about')" class="button">
         About
       </div>
-      <div (click)="smoothScroll('work')" class="header button">Work</div>
-      <div (click)="smoothScroll('contact')" class="header button">Contact</div>
+      <div (click)="smoothScroll('work')" class="button">Work</div>
+      <div (click)="smoothScroll('contact')" class="button">Contact</div>
     </div>
   </section>
   <section id="about">
@@ -27,11 +27,11 @@
         <div>
           <img class="img-section" src="assets/images/about.png" />
           <div class="d-flex justify-content-center">
-            <div (click)="smoothScroll('about')" class="header button">
+            <div (click)="smoothScroll('about')" class="button">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="header button">Work</div>
-            <div (click)="smoothScroll('contact')" class="header button">
+            <div (click)="smoothScroll('work')" class="button">Work</div>
+            <div (click)="smoothScroll('contact')" class="button">
               Contact
             </div>
           </div>
@@ -54,27 +54,43 @@
           center of my development practice.
         </p>
         <h4 class="py-4"><strong>UX and Design</strong></h4>
-        <p></p>
+        <p>
+          It's pretty neat.
+        </p>
       </div>
     </div>
   </section>
   <section id="work">
-    <div class="full-page row">
-      <div class="col-12 col-lg-6 d-flex justify-content-center section-header">
+    <div class="row">
+      <div
+        class="full-page col-12 col-lg-6 d-flex justify-content-center section-header"
+      >
         <div>
           <img class="img-section" src="assets/images/work.png" />
           <div class="d-flex justify-content-center">
-            <div (click)="smoothScroll('about')" class="header button">
+            <div (click)="smoothScroll('about')" class="button">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="header button">Work</div>
-            <div (click)="smoothScroll('contact')" class="header button">
+            <div (click)="smoothScroll('work')" class="button">Work</div>
+            <div (click)="smoothScroll('contact')" class="button">
               Contact
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6 section-text"></div>
+      <div class="col col-12 col-lg-6 p-0">
+        <cdk-virtual-scroll-viewport itemSize="4" class="col-inner">
+          <div (click)="openWork('nexspring')">
+            <img
+              class="work-cover image-cover"
+              src="assets/images/nexspring-square.png"
+            />
+          </div>
+          <div (click)="openWork('nexspring')">
+            <img class="work-cover image-cover" src="assets/images/pdx.png" />
+          </div>
+        </cdk-virtual-scroll-viewport>
+      </div>
     </div>
   </section>
   <section id="contact">
@@ -83,11 +99,11 @@
         <div>
           <img class="img-section" src="assets/images/contact.png" />
           <div class="d-flex justify-content-center">
-            <div (click)="smoothScroll('about')" class="header button">
+            <div (click)="smoothScroll('about')" class="button">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="header button">Work</div>
-            <div (click)="smoothScroll('contact')" class="header button">
+            <div (click)="smoothScroll('work')" class="button">Work</div>
+            <div (click)="smoothScroll('contact')" class="button">
               Contact
             </div>
           </div>
@@ -96,6 +112,10 @@
       <div class="col-sm-12 col-lg-6 section-text">
         <h4 class="pt-4">
           <strong>Lets work together</strong>
+          <div class="d-flex">
+            <div>https://www.linkedin.com/in/halie-kastl/</div>
+            <div></div>
+          </div>
         </h4>
         <p></p>
       </div>

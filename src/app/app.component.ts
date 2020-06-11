@@ -60,4 +60,6 @@ export class AppComponent {
 
     window.requestAnimationFrame(stepFunc);
   }
+
+  openWork(workName) {}
 }

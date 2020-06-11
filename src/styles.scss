@@ -126,10 +126,21 @@ a:hover {
 }
 
 .header {
-  margin-top: 15px;
-  padding-bottom: 75px;
   color: #f0896a;
+}
+
+.button {
+  color: #f0896a;
+  margin-top: 15px;
   margin-bottom: 5px;
+  font-size: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  &:hover {
+    border-bottom: solid #eeffff;
+    cursor: pointer;
+  }
 }
 
 .full-page {
@@ -138,6 +149,25 @@ a:hover {
   background-position: center center;
   text-align: center;
   box-shadow: 1px 1px 6px transparent;
+}
+
+.work-cover {
+  overflow: hidden;
+  opacity: 0.4;
+  height: 100vh;
+  width: 50vw;
+
+  @include mobile {
+    width: 100vw;
+  }
+
+  @include tablet {
+    width: 100vw;
+  }
+}
+
+.image-cover {
+  opacity: 0.72;
 }
 
 .spacer {
@@ -155,6 +185,24 @@ a:hover {
 .row {
   margin: 0;
   padding: 0;
+}
+
+.col {
+  height: 100%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.col-inner {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-right: 0 30px;
+  box-sizing: content-box;
 }
 
 .section-header {
