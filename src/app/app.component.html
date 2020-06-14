@@ -4,21 +4,24 @@
     <div class="wrap full-page justify-content-center">
       <div class="text-light">
         <div>
-          <div class="header justify-content-center">
+          <div class="header pt-4 justify-content-center">
             <p>Fullstack Engineer</p>
           </div>
           <div>
-            <img class="img-container" src="assets/images/welcome-static.png" />
+            <img
+              class="img-container"
+              src="assets/images/welcome-static-2.png"
+            />
           </div>
         </div>
       </div>
     </div>
     <div class="d-flex sticky-nav justify-content-center">
-      <div (click)="smoothScroll('about')" class="button">
+      <div (click)="smoothScroll('about')" class="green-link">
         About
       </div>
-      <div (click)="smoothScroll('work')" class="button">Work</div>
-      <div (click)="smoothScroll('contact')" class="button">Contact</div>
+      <div (click)="smoothScroll('work')" class="green-link">Work</div>
+      <div (click)="smoothScroll('contact')" class="green-link">Contact</div>
     </div>
   </section>
   <section id="about">
@@ -27,11 +30,11 @@
         <div>
           <img class="img-section" src="assets/images/about.png" />
           <div class="d-flex justify-content-center">
-            <div (click)="smoothScroll('about')" class="button">
+            <div (click)="smoothScroll('about')" class="pink-link">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="button">Work</div>
-            <div (click)="smoothScroll('contact')" class="button">
+            <div (click)="smoothScroll('work')" class="pink-link">Work</div>
+            <div (click)="smoothScroll('contact')" class="pink-link">
               Contact
             </div>
           </div>
@@ -53,10 +56,26 @@
           curiosity sustains my work and drives me put a growth mindset at the
           center of my development practice.
         </p>
+
         <h4 class="py-4"><strong>UX and Design</strong></h4>
         <p>
-          It's pretty neat.
+          We create technology to solve human problems, and for me, effective
+          technology absolutely requires an engaging and seamless human
+          experience. I utilize a wide array of tools such as storyboards, user
+          personas, and wireframes to help craft the ideal branding and UI for
+          my projects.
         </p>
+        <div class="pt-4 mt-3 d-flex">
+          <div>
+            <img class="img-small" src="assets/images/version-root.png" />
+          </div>
+          <h4 class="py-4 mr-2">
+            <strong
+              >Curiosity, humility, and collaboration are the values I most try
+              to bring to my work within and without the technical space.
+            </strong>
+          </h4>
+        </div>
       </div>
     </div>
   </section>
@@ -68,28 +87,47 @@
         <div>
           <img class="img-section" src="assets/images/work.png" />
           <div class="d-flex justify-content-center">
-            <div (click)="smoothScroll('about')" class="button">
+            <div (click)="smoothScroll('about')" class="white-link">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="button">Work</div>
-            <div (click)="smoothScroll('contact')" class="button">
+            <div (click)="smoothScroll('work')" class="white-link">Work</div>
+            <div (click)="smoothScroll('contact')" class="white-link">
               Contact
             </div>
           </div>
         </div>
       </div>
-      <div class="col col-12 col-lg-6 p-0">
-        <cdk-virtual-scroll-viewport itemSize="4" class="col-inner">
-          <div (click)="openWork('nexspring')">
-            <img
-              class="work-cover image-cover"
-              src="assets/images/nexspring-square.png"
-            />
+      <div class="full-page col col-12 col-lg-6 p-0">
+        <div
+          class="work-container justify-content-center d-flex align-items-center"
+        >
+          <div>
+            <div>
+              <button
+                class="light-link blog-shadow-dreamy"
+                (click)="showNex = !showNex; showSlalom = false"
+              >
+                Nexspring
+              </button>
+            </div>
+            <div>
+              <button
+                class="light-link blog-shadow-dreamy"
+                (click)="showSlalom = !showSlalom; showNex = false"
+              >
+                Slalom
+              </button>
+            </div>
           </div>
-          <div (click)="openWork('nexspring')">
-            <img class="work-cover image-cover" src="assets/images/pdx.png" />
+        </div>
+        <div>
+          <div *ngIf="showNex">
+            <app-nexspring></app-nexspring>
           </div>
-        </cdk-virtual-scroll-viewport>
+          <div *ngIf="showSlalom">
+            <app-slalom></app-slalom>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -99,28 +137,42 @@
         <div>
           <img class="img-section" src="assets/images/contact.png" />
           <div class="d-flex justify-content-center">
-            <div (click)="smoothScroll('about')" class="button">
+            <div (click)="smoothScroll('about')" class="green-link">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="button">Work</div>
-            <div (click)="smoothScroll('contact')" class="button">
+            <div (click)="smoothScroll('work')" class="green-link">Work</div>
+            <div (click)="smoothScroll('contact')" class="green-link">
               Contact
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-lg-6 section-text">
-        <h4 class="pt-4">
+      <div class="col-sm-12 col-lg-6 full-page section-text">
+        <h4 class="text-center py-4">
           <strong>Lets work together</strong>
-          <div class="d-flex">
-            <div>https://www.linkedin.com/in/halie-kastl/</div>
-            <div></div>
-          </div>
         </h4>
-        <p></p>
+        <div class="external justify-content-center align-items-center d-flex">
+          <div>
+            <a [href]="linkedin" target="_blank">
+              <img
+                class="link-sizing"
+                src="assets/images/linked.png"
+                alt="linkedin"
+              />
+            </a>
+          </div>
+          <div>
+            <a [href]="github" target="_blank">
+              <img
+                class="link-sizing"
+                src="assets/images/github.png"
+                alt="github"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section></section>
 </body>
 <footer></footer>
