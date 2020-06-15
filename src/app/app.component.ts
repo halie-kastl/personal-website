@@ -12,6 +12,21 @@ export class AppComponent implements OnInit {
   github = `https://github.com/halie-kastl?tab=overview&from=2020-06-01&to=2020-06-11`;
   showNex = false;
   showSlalom = false;
+  showMealforge = false;
+  orgs = [
+    {
+      name: "nex",
+      showBool: "showNex",
+    },
+    {
+      name: "slalom",
+      showBool: "showSlalom",
+    },
+    {
+      name: "mealforge",
+      showBool: "showMealforge",
+    },
+  ];
 
   constructor(@Inject(DOCUMENT) document) {}
 
@@ -32,6 +47,12 @@ export class AppComponent implements OnInit {
     //   .setPin("work") // pins the element for the the scene's duration
     //   .setTween(tween)
     //   .addTo(controller); // assign the scene to the controller
+  }
+
+  toggleRender(org) {
+    let orgBool = this.orgs.find((i) => (i.name = org)).showBool;
+
+    return (this[orgBool] = !this[orgBool]);
   }
 
   smoothScroll(elementId) {

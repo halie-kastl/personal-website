@@ -41,7 +41,8 @@
         </div>
       </div>
       <div class="col-12 col-lg-6 section-text">
-        <h4 class="py-4">
+        <!-- <cdk-virtual-scroll-viewport [itemSize]="1" class="about-viewport"> -->
+        <h4 class="py-3">
           <strong
             >I'm a full stack application engineer with a passion for
             functional, beautiful things.</strong
@@ -57,7 +58,7 @@
           center of my development practice.
         </p>
 
-        <h4 class="py-4"><strong>UX and Design</strong></h4>
+        <h4 class="py-3"><strong>UX and Design</strong></h4>
         <p>
           We create technology to solve human problems, and for me, effective
           technology absolutely requires an engaging and seamless human
@@ -69,13 +70,14 @@
           <div>
             <img class="img-small" src="assets/images/version-root.png" />
           </div>
-          <h4 class="py-4 mr-2">
+          <h4 class="py-3 mr-2">
             <strong
               >Curiosity, humility, and collaboration are the values I most try
               to bring to my work within and without the technical space.
             </strong>
           </h4>
         </div>
+        <!-- </cdk-virtual-scroll-viewport> -->
       </div>
     </div>
   </section>
@@ -101,32 +103,42 @@
         <div
           class="work-container justify-content-center d-flex align-items-center"
         >
-          <div>
-            <div>
-              <button
-                class="light-link blog-shadow-dreamy"
-                (click)="showNex = !showNex; showSlalom = false"
-              >
-                Nexspring
-              </button>
+          <cdk-virtual-scroll-viewport [itemSize]="1" class="viewport">
+            <div class="view-container">
+              <div class="light-container-closed">
+                <mat-expansion-panel
+                  (opened)="toggleRender('nex')"
+                  (closed)="toggleRender('nex')"
+                  hideToggle="true"
+                >
+                  <mat-expansion-panel-header>
+                    Nexspring
+                  </mat-expansion-panel-header>
+                  <app-nexspring *ngIf="showNex === true"></app-nexspring>
+                </mat-expansion-panel>
+              </div>
+              <div class="light-container-closed">
+                <mat-expansion-panel
+                  (opened)="toggleRender('slalom')"
+                  (closed)="toggleRender('slalom')"
+                  hideToggle="true"
+                >
+                  <mat-expansion-panel-header>
+                    Slalom
+                  </mat-expansion-panel-header>
+                  <app-slalom></app-slalom>
+                </mat-expansion-panel>
+              </div>
+              <!-- <div class="light-container-closed">
+                <mat-expansion-panel hideToggle="true">
+                  <mat-expansion-panel-header>
+                    Mealforge
+                  </mat-expansion-panel-header>
+                  <app-mealforge></app-mealforge>
+                </mat-expansion-panel>
+              </div> -->
             </div>
-            <div>
-              <button
-                class="light-link blog-shadow-dreamy"
-                (click)="showSlalom = !showSlalom; showNex = false"
-              >
-                Slalom
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div *ngIf="showNex">
-            <app-nexspring></app-nexspring>
-          </div>
-          <div *ngIf="showSlalom">
-            <app-slalom></app-slalom>
-          </div>
+          </cdk-virtual-scroll-viewport>
         </div>
       </div>
     </div>

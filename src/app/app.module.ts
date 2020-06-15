@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 import { NexspringComponent } from "./nexspring/nexspring.component";
 import { SlalomComponent } from "./slalom/slalom.component";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [AppComponent, NexspringComponent, SlalomComponent],
@@ -15,6 +16,7 @@ import { SlalomComponent } from "./slalom/slalom.component";
     AppRoutingModule,
     BrowserAnimationsModule,
     ScrollingModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
