@@ -20,7 +20,7 @@
       <div (click)="smoothScroll('about')" class="green-link">
         About
       </div>
-      <div (click)="smoothScroll('work')" class="green-link">Work</div>
+      <div (click)="smoothScroll('work')" class="green-link">Skills</div>
       <div (click)="smoothScroll('contact')" class="green-link">Contact</div>
     </div>
   </section>
@@ -33,7 +33,7 @@
             <div (click)="smoothScroll('about')" class="pink-link">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="pink-link">Work</div>
+            <div (click)="smoothScroll('work')" class="pink-link">Skills</div>
             <div (click)="smoothScroll('contact')" class="pink-link">
               Contact
             </div>
@@ -92,7 +92,7 @@
             <div (click)="smoothScroll('about')" class="white-link">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="white-link">Work</div>
+            <div (click)="smoothScroll('work')" class="white-link">Skills</div>
             <div (click)="smoothScroll('contact')" class="white-link">
               Contact
             </div>
@@ -105,38 +105,56 @@
         >
           <cdk-virtual-scroll-viewport [itemSize]="1" class="viewport">
             <div class="view-container">
-              <div class="light-container-closed">
-                <mat-expansion-panel
-                  (opened)="toggleRender('nex')"
-                  (closed)="toggleRender('nex')"
-                  hideToggle="true"
-                >
-                  <mat-expansion-panel-header>
-                    Nexspring
-                  </mat-expansion-panel-header>
-                  <app-nexspring *ngIf="showNex === true"></app-nexspring>
-                </mat-expansion-panel>
+              <div>
+                <div class="light-container-closed">
+                  <mat-expansion-panel
+                    [expanded]="true"
+                    (opened)="(true)"
+                    hideToggle="true"
+                  >
+                    <mat-expansion-panel-header>
+                      Things I'm good at
+                    </mat-expansion-panel-header>
+                    <mat-panel-description
+                      class="justify-content-center text-left"
+                    >
+                      <ul>
+                        <li>JavaScript and Typescript</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>HTML/CSS/SASS</li>
+                        <li>Branding, Design and User Experience</li>
+                        <li>
+                          Front-end Architecture in Modern Frameworks including
+                          Angular and React
+                        </li>
+                        <li>AWS and Azure Technologies</li>
+                        <li>Docker</li>
+                        <li>Github</li>
+                      </ul>
+                    </mat-panel-description>
+                  </mat-expansion-panel>
+                </div>
+                <div class="light-container-closed">
+                  <mat-expansion-panel
+                    [expanded]="true"
+                    (opened)="(true)"
+                    hideToggle="true"
+                  >
+                    <mat-expansion-panel-header>
+                      Companies I've worked with
+                    </mat-expansion-panel-header>
+                    <mat-panel-description
+                      class="justify-content-center text-left"
+                    >
+                      <ul>
+                        <li>Slalom Consulting</li>
+                        <li>Nexspring Financial</li>
+                      </ul>
+                    </mat-panel-description>
+                  </mat-expansion-panel>
+                </div>
               </div>
-              <div class="light-container-closed">
-                <mat-expansion-panel
-                  (opened)="toggleRender('slalom')"
-                  (closed)="toggleRender('slalom')"
-                  hideToggle="true"
-                >
-                  <mat-expansion-panel-header>
-                    Slalom
-                  </mat-expansion-panel-header>
-                  <app-slalom></app-slalom>
-                </mat-expansion-panel>
-              </div>
-              <!-- <div class="light-container-closed">
-                <mat-expansion-panel hideToggle="true">
-                  <mat-expansion-panel-header>
-                    Mealforge
-                  </mat-expansion-panel-header>
-                  <app-mealforge></app-mealforge>
-                </mat-expansion-panel>
-              </div> -->
             </div>
           </cdk-virtual-scroll-viewport>
         </div>
@@ -152,7 +170,7 @@
             <div (click)="smoothScroll('about')" class="green-link">
               About
             </div>
-            <div (click)="smoothScroll('work')" class="green-link">Work</div>
+            <div (click)="smoothScroll('work')" class="green-link">Skills</div>
             <div (click)="smoothScroll('contact')" class="green-link">
               Contact
             </div>

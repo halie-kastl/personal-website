@@ -112,6 +112,9 @@ section:nth-child(5) {
 }
 
 .view-container {
+  display: flex;
+  align-items: center;
+
   justify-content: center;
   margin: 5%;
 }
@@ -185,12 +188,12 @@ a:hover {
   display: block;
 }
 
-.light-container-closed {
-  margin-top: 200px;
-  margin-bottom: 200px;
+.mat-expansion-panel-body {
+  font-size: 16px;
+  font-family: "Abel";
 }
 
-.light-container-open {
+.light-container-closed {
   margin-top: 100px;
   margin-bottom: 100px;
 }
